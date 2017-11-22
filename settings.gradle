@@ -1,3 +1,6 @@
 rootProject.name = 'lms'
 
+include 'common'
 include 'book'
+include 'inventory'
+
