@@ -2,5 +2,22 @@ group 'com.eventuate.lms'
 version '1.0-SNAPSHOT'
 
 dependencies {
+
+    compile project(":common")
+    compile project(":book")
+    //SPRING DEPENDENCIES
+    compile "log4j:log4j:1.2.17"
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
+    compile "org.springframework.hateoas:spring-hateoas:$springHateoasVersion"
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile "junit:junit:4.12"
+
+    //eventuate dependencies
+    testCompile "io.eventuate.client.java:eventuate-client-java-jdbc:$eventuateClientVersion"
+    compile "io.eventuate.client.java:eventuate-client-java-spring:$eventuateClientVersion"
+    compile "io.eventuate.local.java:eventuate-local-java-jdbc:${eventuateLocalVersion}"
+    compile "io.eventuate.local.java:eventuate-local-java-embedded-cdc-autoconfigure:${eventuateLocalVersion}"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

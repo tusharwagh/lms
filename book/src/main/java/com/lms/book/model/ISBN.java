@@ -18,4 +18,7 @@ public class ISBN extends BusinessKey<String> {
         return new ISBN(isbnNumber);
     }
 
+    public String getIsbnNumber() {
+        return isbnNumber;
+    }
 }

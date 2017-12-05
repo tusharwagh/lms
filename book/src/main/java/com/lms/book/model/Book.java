@@ -20,4 +20,12 @@ public class Book {
     public static ISBN remove(String isbnNumber) {
         return ISBN.create(isbnNumber);
     }
+
+    public ISBN getIsbn() {
+        return isbn;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
